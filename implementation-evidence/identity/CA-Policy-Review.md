@@ -2,10 +2,11 @@
 
 ## 1. Environment Overview
 
-Tenant Name: Cyber Range Lab
-Total Users Observed: 2179
-Review Date: [15 Feb 2026]
-Reviewer: [Harrison Knapp]
+**Tenant Name:** Cyber Range Lab  
+**Total Users Observed:** 2,179  
+**Review Date:** 2026-02-19  
+**Reviewer:** Harrison Knapp
+
 
 
 ---
