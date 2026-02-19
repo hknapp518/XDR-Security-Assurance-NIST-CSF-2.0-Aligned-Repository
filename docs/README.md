@@ -1,59 +1,81 @@
-# XDR Configuration & Security Gap Assessment
+# XDR Security Gap Analysis
 
-## Executive Summary
+## 1. Executive Summary
 
-This repository documents a simulated Security Assurance engagement focused on evaluating the configuration, telemetry integrity, and detection effectiveness of an enterprise XDR deployment.
+This document details the findings from a simulated XDR security assurance engagement. The assessment validates telemetry coverage, configuration posture, and detection effectiveness across endpoints, identity, and cloud layers.
 
-The purpose of this assessment is to identify control weaknesses, visibility gaps, misconfigurations, and detection deficiencies across endpoint, identity, and cloud security layers. Findings are risk-ranked and aligned with practical remediation guidance.
+**Key Highlights:**  
 
----
-
-## Objectives
-
-- Validate asset inventory and telemetry coverage
-- Assess Microsoft Defender for Endpoint configuration posture
-- Review Microsoft Sentinel data ingestion and analytic rule effectiveness
-- Evaluate Azure / Entra ID identity security controls
-- Conduct controlled detection validation testing
-- Perform structured security gap analysis
-- Produce a prioritized remediation roadmap
+- Total Attack Scenarios Tested: `X`  
+- Detected: `Y`  
+- Missed or Partially Detected: `Z`  
+- High-Risk Gaps: `A`  
+- Medium-Risk Gaps: `B`  
 
 ---
 
-## Technologies in Scope
+## 2. Detection Validation
 
-| Platform | Purpose |
-|----------|----------|
-| Microsoft Defender for Endpoint (MDE) | Endpoint protection & EDR telemetry |
-| Microsoft Sentinel | SIEM & analytics platform |
-| Azure / Entra ID | Identity & access control |
-| Endpoint Telemetry | Behavioral and security event collection |
-| Detection Rules & Analytics | Threat identification logic |
+| Attack Scenario | Layer | Detection Result | Notes / Gap Observed |
+|-----------------|-------|----------------|-------------------|
+| Phishing email with malicious attachment | Endpoint |  |  |
+| Credential spray attack | Identity |  |  |
+| Lateral movement via SMB | Endpoint / Network |  |  |
+| Ransomware simulation | Endpoint |  |  |
+| Malicious PowerShell script | Endpoint |  |  |
+
 
 ---
 
-## Methodology
+## 3. Configuration & Hardening Assessment
 
-The assessment follows a structured assurance lifecycle:
-
-1. **Asset & Telemetry Inventory Validation**
-2. **Configuration & Hardening Review**
-3. **Detection Effectiveness Testing**
-4. **Security Gap Analysis**
-5. **Risk Prioritization & Remediation Planning**
-
-Each phase is documented within the `/docs` directory.
+| Component | Best Practice | Current State | Gap / Risk |
+|-----------|--------------|---------------|------------|
+| Microsoft Defender for Endpoint ASR Rules | Enabled for all endpoints | Partially enabled | Risk of malware execution |
+| Sentinel Log Sources | All critical assets ingested | Some servers missing | Visibility gap |
+| Entra ID MFA Enforcement | Enforced for all users | 80% enforced | High risk of credential compromise |
+| Endpoint Logging Retention | 90 days minimum | 30 days | Compliance and forensic gap |
+| ... | ... | ... | ... |
 
 ---
 
-## Engagement Model
+## 4. Response & Workflow Assessment
 
-This project is structured to mirror a real-world client security assurance engagement, emphasizing:
+| Workflow / Automation | Expected Behavior | Current State | Gap / Risk |
+|----------------------|-----------------|---------------|------------|
+| Endpoint Isolation on ransomware detection | Auto-isolate infected endpoint | Manual only | Delayed containment |
+| Conditional Access Block on compromised account | Immediate block | Partial enforcement | High risk exposure |
+| Sentinel Alert Notification | SOC notified within 5 min | 15 min delay | Potential missed response window |
+| ... | ... | ... | ... |
 
-- Structured documentation
-- Evidence-based analysis
-- Risk-driven evaluation
-- Clear executive-level reporting
+---
 
+## 5. Security Gap Analysis & Risk Prioritization
 
+| Gap Description | Risk Level | Recommended Remediation | Timeline |
+|-----------------|------------|-----------------------|---------|
+| Missing telemetry on legacy servers | Medium | Deploy MDE agents or forward logs | 30 days |
+| No detection for low-volume brute force | High | Create Sentinel analytic rule for failed logins | Immediate |
+| Partial MFA enforcement | High | Enforce conditional access policies | Immediate |
+| Incomplete attack surface reduction rules | Medium | Enable all recommended ASR rules | 30 days |
+| Delayed alert notifications | Medium | Tune alert routing and escalation | 30 days |
+| ... | ... | ... | ... |
 
+---
+
+## 6. Evidence & Validation
+
+- Screenshots of XDR alerts triggered during cyber range simulation  
+- Exported Sentinel queries / detection rule configuration examples  
+- Sample telemetry logs showing detected / missed activity  
+
+> **Tip:** Include anonymized screenshots of attacks and alerts for clarity. Use lab-generated data to avoid sensitive information exposure.
+
+---
+
+## 7. Recommendations & Next Steps
+
+1. Close **high-risk gaps immediately**, particularly gaps impacting identity security and endpoint protection.  
+2. Tune **detection rules** and ensure comprehensive **telemetry coverage** across all assets.  
+3. Implement **automated response workflows** where possible to reduce incident response time.  
+4. Schedule **periodic XDR validation testing** to measure improvement and maintain coverage.  
