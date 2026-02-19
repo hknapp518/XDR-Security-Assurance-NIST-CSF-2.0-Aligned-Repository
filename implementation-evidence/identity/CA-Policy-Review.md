@@ -30,9 +30,15 @@ Policies Targeting Admin Roles:
 
 ## 3. Identity Protection Status
 
-Sign-in Risk Policy:
-User Risk Policy:
-Protection Mode:
+**Sign-in Risk Policy:** Enabled (observed in SigninLogs)  
+<img width="768" height="582" alt="4" src="https://github.com/user-attachments/assets/e47599cc-2656-42c9-b894-b52d124de618" />
+
+**User Risk Policy:** Enabled (observed in SigninLogs)  
+**Protection Mode:** Report-only / Active (as per cyber range defaults)  
+**Failed Sign-in Events Logged:** Yes (confirmed via SigninLogs query)  
+**Risk-based Sign-in Events Logged:** Yes (confirmed via SigninLogs query)  
+**Telemetry Ingestion into Sentinel:** Verified  
+**Observations / Notes:** Identity telemetry is flowing correctly and supports DE.CM-7 and DE.AE-1 detection categories
 
 ---
 
