@@ -19,8 +19,12 @@ List of Policies:
   <img width="755" height="97" alt="3" src="https://github.com/user-attachments/assets/1901467d-8156-4d38-b45d-4f7a41a1621d" />
 - Observed Conditional Access interface exists
 
-Policies Enforcing MFA:
-- Confirmed by cyber range documentation (MFA enabled for all users)
+**Policies Enforcing MFA:**  
+- Cyber range architecture specifies MFA enabled via Security Defaults.  
+- Through a KQL query, the Conditional Access policy was visible; however, many users did not have the policy applied due to limited permissions and lack of elevated privileges.  
+- Evidence from SigninLogs confirms MFA can succeed when the policy applies.
+  <img width="1427" height="599" alt="5" src="https://github.com/user-attachments/assets/3a4256a2-bec2-4d2e-a0c7-c5d680af4460" />
+
 
 Policies Targeting Admin Roles:
 - Unable to confirm due to role restrictions
