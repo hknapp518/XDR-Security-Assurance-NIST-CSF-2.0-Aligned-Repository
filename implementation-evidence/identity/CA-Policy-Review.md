@@ -38,11 +38,14 @@ Policies Targeting Admin Roles:
 <img width="768" height="582" alt="4" src="https://github.com/user-attachments/assets/e47599cc-2656-42c9-b894-b52d124de618" />
 
 **User Risk Policy:** Enabled (observed in SigninLogs)  
+<img width="808" height="468" alt="6" src="https://github.com/user-attachments/assets/6b811553-8d5a-417c-9703-5519c3d408e5" />
+
 **Protection Mode:** Report-only / Active (as per cyber range defaults)  
 **Failed Sign-in Events Logged:** Yes (confirmed via SigninLogs query)  
 **Risk-based Sign-in Events Logged:** Yes (confirmed via SigninLogs query)  
 **Telemetry Ingestion into Sentinel:** Verified  
 **Observations / Notes:** Identity telemetry is flowing correctly and supports DE.CM-7 and DE.AE-1 detection categories
+<img width="1482" height="487" alt="7" src="https://github.com/user-attachments/assets/25696a82-5f27-4189-8bfb-bcc16a601e56" />
 
 ---
 
