@@ -68,3 +68,11 @@ Relevant Functions:
 - Detect (DE.CM – Continuous Monitoring)
 
 Control Effectiveness:
+- PR.AA (Identity & Access Control): Partially Effective
+Identity protection signals are operational; however, absence of Conditional Access enforcement reduces preventative control effectiveness.
+
+- DE.CM (Continuous Monitoring): Effective
+Sign-in telemetry ingestion and risk detection capabilities are functioning as expected.
+
+- DE.AE (Anomalies & Events): Effective
+Risk-based sign-in and user-level risk signals were successfully generated and logged.
