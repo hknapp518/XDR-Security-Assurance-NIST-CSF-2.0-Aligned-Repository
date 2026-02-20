@@ -13,11 +13,11 @@
 
 ## 2. Conditional Access Policies Observed
 
-List of Policies:
-- Unable to view full CA policies due to role restrictions in shared cyber range
-- Cyber range architecture documentation specifies that MFA is enabled for all tenant users (Architecture Ref)
+- The Conditional Access configuration interface was accessible, confirming CA capability is provisioned.
+- Direct review of Conditional Access policies was limited due to role restrictions within the shared cyber range environment.
+- Architecture documentation indicates MFA enforcement via Security Defaults for all tenant users.
   <img width="755" height="97" alt="3" src="https://github.com/user-attachments/assets/1901467d-8156-4d38-b45d-4f7a41a1621d" />
-- Observed Conditional Access interface exists
+- The Conditional Access configuration interface was accessible, confirming CA capability is provisioned.
 
 **Policies Enforcing MFA:**  
 - Cyber range architecture specifies MFA enabled via Security Defaults.  
