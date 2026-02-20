@@ -52,7 +52,7 @@ Policies Targeting Admin Roles:
 ## 4. Observed Gaps / Risks
 
 - Conditional Access Enforcement Gap
-Analysis of 1,030 sign-in events revealed that 0 events had Conditional Access applied and 0 were in report-only mode, while 1,039 events returned ConditionalAccessStatus = notApplied. This indicates that Conditional Access policies are not actively evaluating or enforcing controls within the tenant.
+Analysis of 1,030 sign-in events revealed that 0 events had Conditional Access applied and 0 were in report-only mode, while 1,039 events returned ConditionalAccessStatus = notApplied. This suggests that Conditional Access policies are not actively evaluating or enforcing controls for observed sign-in activity during the review window.
 
 - Risk Signals Without Automated Remediation
 84 risky sign-in events and 2 aggregated risky users were detected during the evaluation period. However, no Conditional Access enforcement was triggered in response to these risk signals. This represents a potential exposure where elevated identity risk is identified but not automatically mitigated (e.g., MFA challenge or access block).
